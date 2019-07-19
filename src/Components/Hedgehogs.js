@@ -10,6 +10,9 @@ export default class Hedgehogs extends Component {
         this.state = {
             hhArray: []
         }
+        this.sellHH = this.sellHH.bind(this)
+        this.updateHH = this.updateHH.bind(this)
+        this.createHH = this.createHH.bind(this)
     }
 componentDidMount(){
     axios.get("./api/hedgehogs").then(res=> {
@@ -18,15 +21,38 @@ componentDidMount(){
         })
     })
 }
+
+sellHH(name){
+    axios.delete(`/api/hedgehogs/${name}`)
+    .then(res=> {
+        this.setState({hhArray: res.data})
+    })
+}
+
+updateHH(body, name) {
+    axios.put(`/api/hedgehogs/${name}`, body)
+    .then(res=> {this.setState({hhArray: res.data})})
+}
+
+createHH(body) {
+    axios.post("./api/hedgehogs", body).then(res => {
+        this.setState({hhArray: res.data})
+    })
+}
+
     render() {
         return(
             <div>
-                <h2>Hedgehogs</h2>
-                <AddHH/>
-                <IndividualHH
-                hhArray= {this.state.hhArray}/>
-                <SearchHH/>
-
+                <main>
+                    <div className= "editbar"   > <AddHH createHH = {this.createHH}/> </div>
+                    <div className="hedgehogDisplay"> 
+                        <IndividualHH
+                hhArray= {this.state.hhArray}
+                sellHH= {this.sellHH}
+                updateHH= {this.updateHH}/> 
+                    </div>
+                
+                </main>
             </div>
         )
     }

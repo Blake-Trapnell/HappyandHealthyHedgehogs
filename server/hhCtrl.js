@@ -5,6 +5,7 @@ getHH(req,res,next) {
     res.status(200).send(hedgehogs)
 },
 createHH(req,res,next) {
+    console.log(req.body)
     hedgehogs.push(req.body)
     res.status(200).send(hedgehogs)
 },

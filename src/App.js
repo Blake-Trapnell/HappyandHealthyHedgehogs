@@ -6,12 +6,8 @@ import Hedgehogs from "./Components/Hedgehogs"
 function App() {
   return (
     <div className="App">
-      <body>
       <Header/>
-      <div className="hedgehogs">
       <Hedgehogs/>
-      </div>
-      </body>
     </div>
   );
 }

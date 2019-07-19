@@ -6,7 +6,7 @@
         "breed": "African-pygmy",
         "gender": "Female",
         "color": "Pinto",
-        "Image": "",
+        "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRLJdW2XU99pWBs1eS7uh8ZxqSSK2wGRFqJpSJRQxVakQVrz4E",
         "Info": ""
     },
     {
@@ -17,7 +17,7 @@
         "breed": "African-pygmy",
         "gender": "Male",
         "color": "Pinto",
-        "Image": "",
+        "Image": "./pictures/Bruce",
         "Info": ""
     },
     {
@@ -28,7 +28,7 @@
         "breed": "African-Pygmy",
         "gender": "Male",
         "color": "Blackeyed Cinnacot",
-        "Image": "",
+        "Image": "./pictures/Corrin",
         "Info": ""
     },
     {
@@ -39,7 +39,7 @@
         "breed": "African-Pygmy",
         "gender": "Female",
         "color": "Salt and Pepper",
-        "Image": "",
+        "Image": "./pictures/Hailey",
         "Info": ""
     },
     {
@@ -50,7 +50,7 @@
         "breed": "Algerian",
         "gender": "Male",
         "color": "Algerian Black",
-        "Image": "",
+        "Image": "./pictures/hedgehog",
         "Info": ""
     },
     {
@@ -83,7 +83,7 @@
         "breed": "Algerian",
         "gender": "Female",
         "color": "Algerian Black",
-        "Image": "",
+        "Image": "./pictures/vona",
         "Info": ""
     },
     {
@@ -105,7 +105,7 @@
         "breed": "Algerian",
         "gender": "Male",
         "color": "Algerian Cinnamon",
-        "Image": "",
+        "Image": "./pictures/Cinnamon",
         "Info": ""
     }
 ]
