@@ -1,5 +1,6 @@
 import React from "react"
-import { url } from "inspector";
+import "./individualHH.css"
+
 
  function IndividualHH(props) {
     return(
@@ -10,9 +11,12 @@ import { url } from "inspector";
                     <h3>{el.name}</h3>
                     <h5>{el.age}</h5>
                     <h5>{el.friendliness}</h5>
-                    <h5>{el.color}</h5>
+                    <h5>{el.breed}</h5>
                     <h5>{el.gender}</h5>
+                    <h5>{el.color}</h5>
+                    <h5>{el.Info}</h5>
             <button onClick={()=> props.sellHH(el.name)}>Sold</button>
+            
                 </div>
             )) : null}
         </div>

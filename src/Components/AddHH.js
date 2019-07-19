@@ -1,8 +1,9 @@
 import React, { Component } from "react"
+import "./AddHH.css"
 
 export default class addHH extends Component {
-    constructor() {
-        super() 
+    constructor(props) {
+        super(props) 
         this.state = {
                 name: "",
                 age: 0,
@@ -33,16 +34,16 @@ export default class addHH extends Component {
             this.setState({color: e})
         }
         imageChange(e) {
-            this.setState({color: e})
+            this.setState({Image: e})
         }
         infoChange(e) {
-            this.setState({color: e})
+            this.setState({Info: e})
         }
 
     render() {
         return(
             <div>
-                <div className="adjust">
+                <div className="editbar">
                     <h3>Create/Update</h3>
             <input onChange={(e)=> this.nameChange(e.target.value)}type="text" placeholder= "Name"/>
             <input onChange={(e)=> this.ageChange(e.target.value)}type="text" placeholder= "age"/>
@@ -54,6 +55,7 @@ export default class addHH extends Component {
             <input onChange={(e)=> this.infoChange(e.target.value)}type="text" placeholder= "Info"/>
                 </div>
             <button onClick={()=>this.props.createHH(this.state)}>Create</button>
+            <button onClick={()=> this.props.updateHH(this.state.name, this.state)}>Update</button>
             </div>
         )
     }

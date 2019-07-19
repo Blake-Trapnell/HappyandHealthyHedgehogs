@@ -3,6 +3,7 @@ import AddHH from "./AddHH"
 import IndividualHH from "./IndividualHH"
 import SearchHH from "./SearchHH"
 import axios from "axios";
+import "./Hedgehogs.css"
 
 export default class Hedgehogs extends Component {
     constructor() {
@@ -29,7 +30,8 @@ sellHH(name){
     })
 }
 
-updateHH(body, name) {
+updateHH(name, body) {
+console.log(name, body)
     axios.put(`/api/hedgehogs/${name}`, body)
     .then(res=> {this.setState({hhArray: res.data})})
 }
@@ -44,12 +46,12 @@ createHH(body) {
         return(
             <div>
                 <main>
-                    <div className= "editbar"   > <AddHH createHH = {this.createHH}/> </div>
+                    <div className= "editbar"   > <AddHH createHH = {this.createHH} updateHH= {this.updateHH}/> </div>
                     <div className="hedgehogDisplay"> 
                         <IndividualHH
                 hhArray= {this.state.hhArray}
                 sellHH= {this.sellHH}
-                updateHH= {this.updateHH}/> 
+                /> 
                     </div>
                 
                 </main>
