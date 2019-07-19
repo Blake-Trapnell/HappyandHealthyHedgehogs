@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito|Pacifico|Shadows+Into+Light&display=swap');
 .hedgehogsShowList {
     height: 100%;
     width: 100%;
@@ -11,13 +12,46 @@
 
 .individualHH {
     height: 40%;
-    width: 30%;
-    background-color: aqua;
-    margin: 10%;
+    width: 28%;
+    background-color: rgb(41, 41, 41);
+    border: 5px rgb(14, 14, 65) solid;
+    margin: 2%;
 }
 
 img {
     height: 40vh;
     width: 100%;
     background-size: cover;
+}
+
+.textbox {
+    height: 100%;
+    width: 100%;
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    justify-content: center;
+}
+
+h5 {
+    border: 2px lightblue solid;
+    width: 30%;
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: 'Barriecito', cursive;
 }

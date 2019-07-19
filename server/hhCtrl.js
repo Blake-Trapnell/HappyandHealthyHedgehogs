@@ -1,12 +1,13 @@
-const hedgehogs = require("./hedgehogs.json")
+// const hedgehogs = require("./hedgehogs.json")
+const hedgehogs = require("./hedgehogs")
 
 module.exports = {
 getHH(req,res,next) {
     res.status(200).send(hedgehogs)
 },
 createHH(req,res,next) {
-    console.log(req.body)
-    hedgehogs.push(req.body)
+    // console.log(req.body)
+    hedgehogs.unshift(req.body)
     res.status(200).send(hedgehogs)
 },
 sellHH(req,res,next) {
@@ -24,7 +25,7 @@ sellHH(req,res,next) {
 updateHH(req,res,next) {
     const {name} = req.params
     const {body} = req
-    console.log(req.body)
+    // console.log(req.body)
 
     const foundname = hedgehogs.filter(el=> (
         el.name.toLowerCase() === name.toLowerCase()
@@ -42,6 +43,13 @@ updateHH(req,res,next) {
             }
         }
         res.status(200).send(hedgehogs)
-    }
+    },
+searchHH(req,res,next) {
+    console.log(req.query)
+    let search = hedgehogs.filter(el=> (
+        el.name.toLowerCase() === req.query.name.toLowerCase()
+    ))
+    res.status(200).send(search)
+}
 
 }

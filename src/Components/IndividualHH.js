@@ -9,14 +9,20 @@ import "./individualHH.css"
             {props.hhArray.length > 0 ? props.hhArray.map(el => (
                     <div  className= "individualHH">
                 <img src={el.Image} alt={el.name}/>
-                    <h3>{el.name}</h3>
-                    <h5>{el.age}</h5>
-                    <h5>{el.friendliness}</h5>
-                    <h5>{el.breed}</h5>
-                    <h5>{el.gender}</h5>
-                    <h5>{el.color}</h5>
-                    <h5>{el.Info}</h5>
+                <div className="textbox">
+                    <div>
+                    <h2>{el.name}</h2>
+                    </div>
+                    <div>
+                    <h5>Age: <p>{el.age}</p></h5>
+                    <h5>Temperament: <p> {el.friendliness} </p></h5>
+                    <h5>Breed: <p> {el.breed} </p></h5>
+                    <h5>Gender: <p>{el.gender}</p></h5>
+                    <h5>Color: <p>{el.color}</p></h5>
+                    <h5>Other Info: <p>{el.Info}</p></h5>
+                    </div>
             <button onClick={()=> props.sellHH(el.name)}>Sold</button>
+                </div>
                     </div>
             )) : null}
                 </div>

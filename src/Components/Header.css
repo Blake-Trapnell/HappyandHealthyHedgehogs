@@ -17,3 +17,9 @@ h1 {}
     height: 100px;
     width: 100px;
 }
+
+img {
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+}

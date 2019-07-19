@@ -38,8 +38,8 @@ updateHH(name, body) {
         this.setState({hhArray: res.data})
     }).catch(function(error){console.log(error)})
 }
-searchHH(body) {
-    axios.get(`/api/hedgehogs:${body}`)
+searchHH(name) {
+    axios.get(`/api/hedgehogs/search?name=${name}`)
     .then(res=> {
         this.setState({hhArray: res.data})
     }).catch(function(error){console.log(error)})

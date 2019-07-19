@@ -46,11 +46,10 @@ export default class addHH extends Component {
         return(
             <div>
                 <section className="editbar">
-                    <Logo/>
                     <h3>Create/Update</h3>
             <input onChange={(e)=> this.nameChange(e.target.value)}type="text" placeholder= "Name"/>
             <input onChange={(e)=> this.ageChange(e.target.value)}type="text" placeholder= "age"/>
-            <input onChange={(e)=> this.friendlyChange(e.target.value)}type="text" placeholder= "Friendliness level"/>
+            <input onChange={(e)=> this.friendlyChange(e.target.value)}type="text" placeholder= "temperament"/>
             <input onChange={(e)=> this.breedChange(e.target.value)}type="text" placeholder= "breed"/>
             <input onChange={(e)=> this.genderChange(e.target.value)}type="text" placeholder= "gender"/>
             <input onChange={(e)=> this.colorChange(e.target.value)}type="text" placeholder= "Color"/>
@@ -59,7 +58,7 @@ export default class addHH extends Component {
             <div className="create">
             <button onClick={()=> createHH(this.state)}>Create</button>
             <button onClick={()=> updateHH(this.state.name, this.state)}>Update</button>
-            <button onClick={()=> searchHH(this.state)}>Search</button>
+            <button onClick={()=> searchHH(this.state.name)}>Search</button>
 
             </div>
                 </section>
