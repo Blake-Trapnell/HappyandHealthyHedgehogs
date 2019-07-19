@@ -15,3 +15,9 @@
     background-color: aqua;
     margin: 10%;
 }
+
+img {
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+}

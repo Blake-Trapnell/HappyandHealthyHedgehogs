@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./AddHH.css"
+import Logo from "./Logo"
 
 export default class addHH extends Component {
     constructor(props) {
@@ -41,26 +42,27 @@ export default class addHH extends Component {
         }
 
     render() {
-        const {nameChange, ageChange, friendlyChange, breedChange, genderChange, colorChange, imageChange, infoChange} = this
+        const {createHH, updateHH, searchHH,} = this.props
         return(
             <div>
-                <div className="editbar">
+                <section className="editbar">
+                    <Logo/>
                     <h3>Create/Update</h3>
-            <input onChange={(e)=> nameChange(e.target.value)}type="text" placeholder= "Name"/>
-            <input onChange={(e)=> ageChange(e.target.value)}type="text" placeholder= "age"/>
-            <input onChange={(e)=> friendlyChange(e.target.value)}type="text" placeholder= "Friendliness level"/>
-            <input onChange={(e)=> breedChange(e.target.value)}type="text" placeholder= "breed"/>
-            <input onChange={(e)=> genderChange(e.target.value)}type="text" placeholder= "gender"/>
-            <input onChange={(e)=> colorChange(e.target.value)}type="text" placeholder= "Color"/>
-            <input onChange={(e)=> imageChange(e.target.value)}type="text" placeholder= "image"/>
-            <input onChange={(e)=> infoChange(e.target.value)}type="text" placeholder= "Info"/>
+            <input onChange={(e)=> this.nameChange(e.target.value)}type="text" placeholder= "Name"/>
+            <input onChange={(e)=> this.ageChange(e.target.value)}type="text" placeholder= "age"/>
+            <input onChange={(e)=> this.friendlyChange(e.target.value)}type="text" placeholder= "Friendliness level"/>
+            <input onChange={(e)=> this.breedChange(e.target.value)}type="text" placeholder= "breed"/>
+            <input onChange={(e)=> this.genderChange(e.target.value)}type="text" placeholder= "gender"/>
+            <input onChange={(e)=> this.colorChange(e.target.value)}type="text" placeholder= "Color"/>
+            <input onChange={(e)=> this.imageChange(e.target.value)}type="text" placeholder= "image"/>
+            <input onChange={(e)=> this.infoChange(e.target.value)}type="text" placeholder= "Info"/>
             <div className="create">
-            <button onClick={()=>this.props.createHH(this.state)}>Create</button>
-            <button onClick={()=> this.props.updateHH(this.state.name, this.state)}>Update</button>
-            <button onClick={()=> this.props.searchHH(this.state)}>Search</button>
+            <button onClick={()=> createHH(this.state)}>Create</button>
+            <button onClick={()=> updateHH(this.state.name, this.state)}>Update</button>
+            <button onClick={()=> searchHH(this.state)}>Search</button>
 
             </div>
-                </div>
+                </section>
             </div>
         )
     }

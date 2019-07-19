@@ -21,14 +21,14 @@ componentDidMount(){
         this.setState({
             hhArray: res.data
         })
-    })
+    }).catch(function(error){console.log(error)})
 }
 
 sellHH(name){
     axios.delete(`/api/hedgehogs/${name}`)
     .then(res=> {
         this.setState({hhArray: res.data})
-    })
+    }).catch(function(error){console.log(error)})
 }
 
 updateHH(name, body) {
@@ -36,19 +36,19 @@ updateHH(name, body) {
     axios.put(`/api/hedgehogs/${name}`, body)
     .then(res=> {
         this.setState({hhArray: res.data})
-    })
+    }).catch(function(error){console.log(error)})
 }
-searchHH(param) {
-    axios.get(`/api/hedgehogs:${param}`)
+searchHH(body) {
+    axios.get(`/api/hedgehogs:${body}`)
     .then(res=> {
         this.setState({hhArray: res.data})
-    })
+    }).catch(function(error){console.log(error)})
 }
 
 createHH(body) {
     axios.post("./api/hedgehogs", body).then(res => {
         this.setState({hhArray: res.data})
-    })
+    }).catch(function(error){console.log(error)})
 }
 
     render() {

@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Barriecito|Pacifico|Shadows+Into+Light&display=swap');
 header {
     height: 20vh;
-    width: 98vw;
+    width: 99vw;
     background-color: lightblue;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     font-family: 'Barriecito', cursive;
-    font-size: 2rem;
-    align-items: baseline;
+    font-size: 1.5rem;
+    align-items: center;
     border: 3px lightgray solid;
 }
 
-h1 {
-    margin: 0 0 2vh 0;
+h1 {}
+
+.logo {
+    height: 100px;
+    width: 100px;
 }

@@ -31,7 +31,14 @@ updateHH(req,res,next) {
     ))
         for (let i = 0; i < hedgehogs.length; i++) {
             if(hedgehogs[i].name === foundname[0].name) {
-                hedgehogs[i] = body
+                hedgehogs[i].name = body.name ||  hedgehogs[i].name
+                hedgehogs[i].Image = body.Image ||  hedgehogs[i].Image
+                hedgehogs[i].age = body.age ||  hedgehogs[i].age
+                hedgehogs[i].friendliness = body.friendliness ||  hedgehogs[i].friendliness
+                hedgehogs[i].breed = body.breed ||  hedgehogs[i].breed
+                hedgehogs[i].gender = body.gender ||  hedgehogs[i].gender
+                hedgehogs[i].color = body.color ||  hedgehogs[i].color
+                hedgehogs[i].Info = body.Info ||  hedgehogs[i].Info
             }
         }
         res.status(200).send(hedgehogs)
