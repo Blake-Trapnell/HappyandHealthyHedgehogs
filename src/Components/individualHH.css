@@ -1,0 +1,17 @@
+.hedgehogsShowList {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: space-around;
+}
+
+.individualHH {
+    height: 40%;
+    width: 30%;
+    background-color: aqua;
+    margin: 10%;
+}

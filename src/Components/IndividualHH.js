@@ -4,9 +4,10 @@ import "./individualHH.css"
 
  function IndividualHH(props) {
     return(
-        <div className= "outside">
+        <div className= "outsidebox">
+                <div className= "hedgehogsShowList">
             {props.hhArray.length > 0 ? props.hhArray.map(el => (
-                <div className= "individualHH">
+                    <div  className= "individualHH">
                 <img src={el.Image} alt={el.name}/>
                     <h3>{el.name}</h3>
                     <h5>{el.age}</h5>
@@ -16,9 +17,9 @@ import "./individualHH.css"
                     <h5>{el.color}</h5>
                     <h5>{el.Info}</h5>
             <button onClick={()=> props.sellHH(el.name)}>Sold</button>
-            
-                </div>
+                    </div>
             )) : null}
+                </div>
         </div>
     )
 }

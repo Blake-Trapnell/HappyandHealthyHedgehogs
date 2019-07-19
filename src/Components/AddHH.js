@@ -6,13 +6,13 @@ export default class addHH extends Component {
         super(props) 
         this.state = {
                 name: "",
-                age: 0,
+                age: "",
                 friendliness: "",
                 breed: "",
                 gender: "",
                 color: "",
                 Image: "",
-                info: "",
+                Info: "",
             }
         }
         nameChange(e) {
@@ -41,21 +41,26 @@ export default class addHH extends Component {
         }
 
     render() {
+        const {nameChange, ageChange, friendlyChange, breedChange, genderChange, colorChange, imageChange, infoChange} = this
         return(
             <div>
                 <div className="editbar">
                     <h3>Create/Update</h3>
-            <input onChange={(e)=> this.nameChange(e.target.value)}type="text" placeholder= "Name"/>
-            <input onChange={(e)=> this.ageChange(e.target.value)}type="text" placeholder= "age"/>
-            <input onChange={(e)=> this.friendlyChange(e.target.value)}type="text" placeholder= "Friendliness level"/>
-            <input onChange={(e)=> this.breedChange(e.target.value)}type="text" placeholder= "breed"/>
-            <input onChange={(e)=> this.genderChange(e.target.value)}type="text" placeholder= "gender"/>
-            <input onChange={(e)=> this.colorChange(e.target.value)}type="text" placeholder= "Color"/>
-            <input onChange={(e)=> this.imageChange(e.target.value)}type="text" placeholder= "image"/>
-            <input onChange={(e)=> this.infoChange(e.target.value)}type="text" placeholder= "Info"/>
-                </div>
+            <input onChange={(e)=> nameChange(e.target.value)}type="text" placeholder= "Name"/>
+            <input onChange={(e)=> ageChange(e.target.value)}type="text" placeholder= "age"/>
+            <input onChange={(e)=> friendlyChange(e.target.value)}type="text" placeholder= "Friendliness level"/>
+            <input onChange={(e)=> breedChange(e.target.value)}type="text" placeholder= "breed"/>
+            <input onChange={(e)=> genderChange(e.target.value)}type="text" placeholder= "gender"/>
+            <input onChange={(e)=> colorChange(e.target.value)}type="text" placeholder= "Color"/>
+            <input onChange={(e)=> imageChange(e.target.value)}type="text" placeholder= "image"/>
+            <input onChange={(e)=> infoChange(e.target.value)}type="text" placeholder= "Info"/>
+            <div className="create">
             <button onClick={()=>this.props.createHH(this.state)}>Create</button>
             <button onClick={()=> this.props.updateHH(this.state.name, this.state)}>Update</button>
+            <button onClick={()=> this.props.searchHH(this.state)}>Search</button>
+
+            </div>
+                </div>
             </div>
         )
     }
