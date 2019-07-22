@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import AddHH from "./AddHH"
 import IndividualHH from "./IndividualHH"
-import SearchHH from "./SearchHH"
 import axios from "axios";
 import "./Hedgehogs.css"
 
