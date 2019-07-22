@@ -45,7 +45,7 @@ updateHH(req,res,next) {
         res.status(200).send(hedgehogs)
     },
 searchHH(req,res,next) {
-    console.log(req.query)
+    // console.log(req.query)
     let search = hedgehogs.filter(el=> (
         el.name.toLowerCase() === req.query.name.toLowerCase()
     ))

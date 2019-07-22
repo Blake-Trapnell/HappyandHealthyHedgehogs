@@ -3,6 +3,7 @@ import AddHH from "./AddHH"
 import IndividualHH from "./IndividualHH"
 import axios from "axios";
 import "./Hedgehogs.css"
+import Footer from "./Footer"
 
 export default class Hedgehogs extends Component {
     constructor() {
@@ -14,6 +15,7 @@ export default class Hedgehogs extends Component {
         this.updateHH = this.updateHH.bind(this)
         this.createHH = this.createHH.bind(this)
         this.searchHH = this.searchHH.bind(this)
+        this.resetHH = this.resetHH.bind(this)
     }
 componentDidMount(){
     axios.get("./api/hedgehogs").then(res=> {
@@ -22,6 +24,14 @@ componentDidMount(){
         })
     }).catch(function(error){console.log(error)})
 }
+
+resetHH()  {    
+    console.log("is this working")
+    axios.get("./api/hedgehogs").then(res=> {
+    this.setState({
+        hhArray: res.data
+    })
+}).catch(function(error){console.log(error)})}
 
 sellHH(name){
     axios.delete(`/api/hedgehogs/${name}`)
@@ -61,8 +71,8 @@ createHH(body) {
                 sellHH= {this.sellHH}
                 /> 
                     </div>
-                
                 </main>
+                <Footer resetHH={this.resetHH}/>
             </div>
         )
     }

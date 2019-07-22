@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import "./AddHH.css"
-import Logo from "./Logo"
 
 export default class addHH extends Component {
     constructor(props) {

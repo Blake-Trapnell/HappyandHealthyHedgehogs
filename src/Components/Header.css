@@ -2,7 +2,7 @@
 header {
     height: 20vh;
     width: 99vw;
-    background-color: lightblue;
+    background-color: #add8e6;
     display: flex;
     justify-content: space-evenly;
     font-family: 'Barriecito', cursive;
@@ -19,7 +19,33 @@ h1 {}
 }
 
 img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     background-size: contain;
+}
+
+.pokemon {
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+}
+
+footer {
+    height: 20vh;
+    width: 99vw;
+    background-color: #add8e6;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Barriecito', cursive;
+    font-size: 1.5rem;
+    align-items: center;
+    border: 3px lightgray solid;
+}
+
+.bottom {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
