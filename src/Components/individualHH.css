@@ -2,7 +2,7 @@
 .hedgehogsShowList {
     height: 100%;
     width: 100%;
-    background-color: rgb(43, 43, 43);
+    background: -webkit-linear-gradient(45deg, rgb(1, 34, 65) 20%, rgb(12, 13, 97) 30%, rgb(77, 195, 241) 100%);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -27,7 +27,7 @@ img {
 .textbox {
     height: 100%;
     width: 100%;
-    background-color: silver;
+    background-color: rgb(143, 143, 143);
     display: flex;
     align-items: center;
     flex-direction: column;
