@@ -37,7 +37,7 @@ guessThatPokemon() {
         alert(`Correct! Pokedex Number: ${this.state.pokedex}`)
     }
     else {
-        alert(`not quite! the correct name is ${this.state.name} Pokedex Number: ${this.state.pokedex}`)
+        alert(`not quite! the correct name is ${this.state.name}. Pokedex Number: ${this.state.pokedex}`)
     }
 }
 

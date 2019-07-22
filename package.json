@@ -9,7 +9,9 @@
         "express": "^4.17.1",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
-        "react-scripts": "3.0.1"
+        "react-reveal": "^1.2.2",
+        "react-scripts": "3.0.1",
+        "reveal": "0.0.4"
     },
     "scripts": {
         "start": "react-scripts start",

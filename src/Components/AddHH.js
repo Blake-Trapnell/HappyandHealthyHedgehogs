@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import "./AddHH.css"
+import React, { Component } from "react";
+import "./AddHH.css";
 
 export default class addHH extends Component {
     constructor(props) {
@@ -57,8 +57,7 @@ export default class addHH extends Component {
             <div className="create">
             <button onClick={()=> createHH(this.state)}>Create</button>
             <button onClick={()=> updateHH(this.state.name, this.state)}>Update</button>
-            <button onClick={()=> searchHH(this.state.name)}>Search</button>
-
+            <button onClick={()=> searchHH(this.state.name)}>Search</button>    
             </div>
                 </section>
             </div>
